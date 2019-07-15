@@ -11,6 +11,7 @@
 <a name="verbs"></a>
 ## Verbes
 
+- **A défini** un Learning Outcome : `http://id.tincanapi.com/verb/defined`
 - **A lancé** une séance : `http://adlnet.gov/expapi/verbs/initialized`
 - **A été évalué** sur une séance ou un Learning Outcome : `http://vocab.xapi.fr/verbs/was-assessed`
 - **A annulé** une évaluation : `http://adlnet.gov/expapi/verbs/voided`

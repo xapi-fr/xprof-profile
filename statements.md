@@ -2,11 +2,8 @@
 
 ---
 
-> {info} Dans un souci de simplification, la définition des Learning Outcomes (LO)
-a été insérée dans les Statements d'évaluation.
-
-
 - [Règles communes](#rules)
+- [D01 - Un concepteur a défini un LO.](#D01)
 - [T01 - L’enseignant a lancé une séance.](#T01)
 - [T02 - L’enseignant a clôturé une séance.](#T02)
 - [T03 - L’enseignant a annulé une évaluation.](#T03)
@@ -23,6 +20,111 @@ a été insérée dans les Statements d'évaluation.
 - La propriété `context.platform` DOIT être précisée et avoir pour valeur `xProf`.
 - La propriété `context.team` DOIT identifier le groupe d'apprenants concerné sans lister ses membres.
 - La propriété `timestamp` DOIT être précisée.
+
+
+<a name="D01"></a>
+### D01 - Un concepteur a défini un LO.
+
+Cette trace est facultative. 
+Elle permet de définir précisemment les LO dès de leur création, avant même qu'ils ne soient utilisés par xProf.
+L'intérêt est d'éviter d'avoir à redéfinir dans le détail les LO à chaque évaluation de l'apprenant
+lors d'une trace [L01 - L’apprenant a été évalué sur un LO](#L01).
+
+- La propriété `object.definition.correctResponsesPattern` habituellement utilisée pour les interactions CMI de type likert ne DOIT pas être utilisée ici.
+- La propriété `object.definition.scale` DOIT définir les niveaux d'évaluation, du moins satisfaisant au plus satisfaisant, correspondant à des scores allant de 0 à N.
+- La propriété `context.contextActivities.parent` DOIT préciser l'activité à laquelle est rattaché le LO.
+- L'extension de contexte `cmi-interaction-weighting` PEUT être utilisée pour fixer un poids au LO dans le cadre de l'activité.
+
+``` json
+{
+    "actor": {
+        "objectType": "Agent",
+        "name": "Sansa Stark",
+        "account": {
+            "homePage": "http://moodle.isae.fr",
+            "name": "sansa.stark"
+        }
+    },
+    "verb": {
+        "id": "http://id.tincanapi.com/verb/defined"
+    },
+    "object": {
+        "objectType": "Activity",
+        "id": "http://moodle.isae.fr/xapi/activities/grade_outcomes/1fae9d58-6bc7-42ec-ad9f-f9633d102fef",
+        "definition": {
+            "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+            "description": {
+                "fr-FR": "Comprendre les principes de fonctionnement d'un moteur."
+            },
+            "interactionType": "likert",
+            "scale": [
+                {
+                    "id": "low", 
+                    "description": {
+                        "fr-FR": "It's really not OK"
+                    }
+                },
+                {
+                    "id": "medium", 
+                    "description": {
+                        "fr-FR": "It could be better"
+                    }
+                },
+                {
+                    "id": "hight", 
+                    "description": {
+                        "fr-FR": "It's OK"
+                    }
+                }
+            ]
+        }    
+    },
+    "context": {
+        "contextActivities": {
+            "parent": [
+                "object": {
+                    "objectType": "Activity",
+                    "id": "http://xapi.moodle.test/xapi/activities/lti/e403e7ee-4cdd-4d25-b7d9-5de3569a1cc2",
+                    "definition": {
+                        "type": "http://vocab.xapi.fr/activities/external-activity"
+                    }
+                }
+            ],
+            "grouping": [
+                {
+                    "objectType": "Activity",
+                    "id": "http://xapi.moodle.test",
+                    "definition": {
+                        "type": "http://vocab.xapi.fr/activities/system"
+                    }
+                },
+                {
+                    "objectType": "Activity",
+                    "id": "http://xapi.moodle.test/xapi/activities/course/ba297687-b1aa-4477-9efd-a782c8fdb90a",
+                    "definition": {
+                        "type": "http://vocab.xapi.fr/activities/course"
+                    }
+                }
+            ],            
+            "category": [
+                {
+                    "objectType": "Activity",
+                    "id": "http://xapi.isae.fr/vocab/profiles/xprof",
+                    "definition": {
+                        "type": "http://adlnet.gov/expapi/activities/profile"
+                    }
+                }
+            ]
+        },
+        "platform": "xProf",
+        "extensions": {
+            "http://id.tincanapi.com/extension/cmi-interaction-weighting": 0.5
+        }
+    },
+    "timestamp": "2019-02-25T15:34:25.804+00:00"
+}
+
+```
 
 
 <a name="T01"></a>
@@ -221,8 +323,7 @@ a été insérée dans les Statements d'évaluation.
 <a name="L01"></a>
 ### L01 - L’apprenant a été évalué sur un LO.
 
-- La propriété `object.definition.correctResponsesPattern` habituellement utilisée pour les interactions CMI de type likert ne DOIT pas être utilisée ici.
-- La propriété `object.definition.scale` DOIT définir les niveaux d'évaluation, du moins satisfaisant au plus satisfaisant, correspondant à des scores allant de 0 à N.
+- Les propriétés `object.definition.description`, `object.definition.interactionType` et `object.definition.scale` DOIVENT être définies si aucune trace de définition du LO n'a été émise précédemment. Se référer à [D01 - Un concepteur a défini un LO](#D01).
 - La propriété `result.score` DOIT préciser la note obtenue, avec ses 4 sous-propriétés obligatoires.
 - La propriété `result.response` PEUT préciser l'appréciation de l'enseignant.
 - La propriété `context.contextActivities.parent` DOIT préciser l'activité parente qui est la séance xProf.
