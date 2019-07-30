@@ -33,8 +33,8 @@
 ## Extensions d’activités
 
 - Deferred : `http://vocab.xapi.fr/extensions/deferred`
-- Duration : `http://vocab.xapi.fr/extensions/duration`
-- Date : `http://vocab.xapi.fr/extensions/date`
+- Duration : `http://id.tincanapi.com/extension/duration`
+- Date : `http://id.tincanapi.com/extension/date`
 
 
 <a name="context-extensions"></a>

@@ -154,8 +154,8 @@ lors d'une trace [L01 - L’apprenant a été évalué sur un LO](#L01).
             "type": "http://vocab.xapi.fr/activities/live-session",
             "extensions": {
                 "http://vocab.xapi.fr/extensions/deferred": true,
-                "http://vocab.xapi.fr/extensions/duration": "PT1H",
-                "http://vocab.xapi.fr/extensions/date": "2019-02-25",
+                "http://id.tincanapi.com/extension/duration": "PT1H",
+                "http://id.tincanapi.com/extension/date": "2019-02-25",
             }
         }
     },
