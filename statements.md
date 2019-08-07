@@ -319,7 +319,7 @@ lors d'une trace [L01 - L’apprenant a été évalué sur un LO](#L01).
 
 ```
 
-> {danger.fa-exclamation-triangle} L'utilisation du verbe `void` conduit à l'annulation du Statement dans le LRS.
+> {danger.fa-exclamation-triangle} L'utilisation du verbe `voided` conduit à l'annulation du Statement dans le LRS.
 Les Statements annulés sont susceptibles de disparaitre totalement lors d'un transfert de LRS à LRS.
 Cette approche est donc délicate car elle peut conduire à emputer une partie de l'historique de l'apprenant.
 Cette trace peut être utilisée suite à une erreur de saisie par le formateur, 
