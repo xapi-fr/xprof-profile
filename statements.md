@@ -83,7 +83,6 @@ lors d'une trace [L01 - L’apprenant a été évalué sur un LO](#L01).
         "contextActivities": {
             "parent": [
                 "object": {
-                    "objectType": "Activity",
                     "id": "http://xapi.moodle.test/xapi/activities/lti/e403e7ee-4cdd-4d25-b7d9-5de3569a1cc2",
                     "definition": {
                         "type": "http://vocab.xapi.fr/activities/external-activity"
@@ -92,14 +91,12 @@ lors d'une trace [L01 - L’apprenant a été évalué sur un LO](#L01).
             ],
             "grouping": [
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.moodle.test",
                     "definition": {
                         "type": "http://vocab.xapi.fr/activities/system"
                     }
                 },
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.moodle.test/xapi/activities/course/ba297687-b1aa-4477-9efd-a782c8fdb90a",
                     "definition": {
                         "type": "http://vocab.xapi.fr/activities/course"
@@ -108,8 +105,13 @@ lors d'une trace [L01 - L’apprenant a été évalué sur un LO](#L01).
             ],            
             "category": [
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.isae.fr/vocab/profiles/xprof",
+                    "definition": {
+                        "type": "http://adlnet.gov/expapi/activities/profile"
+                    }
+                },
+                {
+                    "id": "http://vocab.xapi.fr/categories/vle-profile",
                     "definition": {
                         "type": "http://adlnet.gov/expapi/activities/profile"
                     }
@@ -163,21 +165,18 @@ lors d'une trace [L01 - L’apprenant a été évalué sur un LO](#L01).
         "contextActivities": {
             "grouping": [
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.moodle.test",
                     "definition": {
                         "type": "http://vocab.xapi.fr/activities/system"
                     }
                 },
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.moodle.test/xapi/activities/course/ba297687-b1aa-4477-9efd-a782c8fdb90a",
                     "definition": {
                         "type": "http://vocab.xapi.fr/activities/course"
                     }
                 },
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.moodle.test/xapi/activities/lti/e403e7ee-4cdd-4d25-b7d9-5de3569a1cc2",
                     "definition": {
                         "type": "http://vocab.xapi.fr/activities/external-activity"
@@ -186,8 +185,13 @@ lors d'une trace [L01 - L’apprenant a été évalué sur un LO](#L01).
             ],            
             "category": [
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.isae.fr/vocab/profiles/xprof",
+                    "definition": {
+                        "type": "http://adlnet.gov/expapi/activities/profile"
+                    }
+                },
+                {
+                    "id": "http://vocab.xapi.fr/categories/vle-profile",
                     "definition": {
                         "type": "http://adlnet.gov/expapi/activities/profile"
                     }
@@ -248,21 +252,18 @@ lors d'une trace [L01 - L’apprenant a été évalué sur un LO](#L01).
         "contextActivities": {
             "grouping": [
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.moodle.test",
                     "definition": {
                         "type": "http://vocab.xapi.fr/activities/system"
                     }
                 },
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.moodle.test/xapi/activities/course/ba297687-b1aa-4477-9efd-a782c8fdb90a",
                     "definition": {
                         "type": "http://vocab.xapi.fr/activities/course"
                     }
                 },
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.moodle.test/xapi/activities/lti/e403e7ee-4cdd-4d25-b7d9-5de3569a1cc2",
                     "definition": {
                         "type": "http://vocab.xapi.fr/activities/external-activity"
@@ -271,8 +272,13 @@ lors d'une trace [L01 - L’apprenant a été évalué sur un LO](#L01).
             ],            
             "category": [
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.isae.fr/vocab/profiles/xprof",
+                    "definition": {
+                        "type": "http://adlnet.gov/expapi/activities/profile"
+                    }
+                },
+                {
+                    "id": "http://vocab.xapi.fr/categories/vle-profile",
                     "definition": {
                         "type": "http://adlnet.gov/expapi/activities/profile"
                     }
@@ -394,7 +400,6 @@ Un apprenant qui a été ré-évaué doit disposer de l'historique de ses évalu
         "contextActivities": {
             "parent": [
                 "object": {
-                    "objectType": "Activity",
                     "id": "http://xprof.isae.fr/xapi/activities/session/123456",
                     "definition": {
                         "type": "http://vocab.xapi.fr/activities/live-session"
@@ -403,21 +408,18 @@ Un apprenant qui a été ré-évaué doit disposer de l'historique de ses évalu
             ],
             "grouping": [
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.moodle.test",
                     "definition": {
                         "type": "http://vocab.xapi.fr/activities/system"
                     }
                 },
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.moodle.test/xapi/activities/course/ba297687-b1aa-4477-9efd-a782c8fdb90a",
                     "definition": {
                         "type": "http://vocab.xapi.fr/activities/course"
                     }
                 },
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.moodle.test/xapi/activities/lti/e403e7ee-4cdd-4d25-b7d9-5de3569a1cc2",
                     "definition": {
                         "type": "http://vocab.xapi.fr/activities/external-activity"
@@ -426,8 +428,13 @@ Un apprenant qui a été ré-évaué doit disposer de l'historique de ses évalu
             ],            
             "category": [
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.isae.fr/vocab/profiles/xprof",
+                    "definition": {
+                        "type": "http://adlnet.gov/expapi/activities/profile"
+                    }
+                },
+                {
+                    "id": "http://vocab.xapi.fr/categories/vle-profile",
                     "definition": {
                         "type": "http://adlnet.gov/expapi/activities/profile"
                     }
@@ -493,21 +500,18 @@ Un apprenant qui a été ré-évaué doit disposer de l'historique de ses évalu
         "contextActivities": {
             "grouping": [
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.moodle.test",
                     "definition": {
                         "type": "http://vocab.xapi.fr/activities/system"
                     }
                 },
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.moodle.test/xapi/activities/course/ba297687-b1aa-4477-9efd-a782c8fdb90a",
                     "definition": {
                         "type": "http://vocab.xapi.fr/activities/course"
                     }
                 },
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.moodle.test/xapi/activities/lti/e403e7ee-4cdd-4d25-b7d9-5de3569a1cc2",
                     "definition": {
                         "type": "http://vocab.xapi.fr/activities/external-activity"
@@ -516,8 +520,13 @@ Un apprenant qui a été ré-évaué doit disposer de l'historique de ses évalu
             ],            
             "category": [
                 {
-                    "objectType": "Activity",
                     "id": "http://xapi.isae.fr/vocab/profiles/xprof",
+                    "definition": {
+                        "type": "http://adlnet.gov/expapi/activities/profile"
+                    }
+                },
+                {
+                    "id": "http://vocab.xapi.fr/categories/vle-profile",
                     "definition": {
                         "type": "http://adlnet.gov/expapi/activities/profile"
                     }
