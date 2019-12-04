@@ -16,6 +16,7 @@
 
 - Le `type` des activités DOIT être précisé.
 - Le profil xProf DOIT être indiqué dans la propriété `context.contextActivities.category`. 
+- Le profil VLE DOIT être indiqué dans la propriété `context.contextActivities.category`. 
 - Lorsque xProf est lancé depuis Moodle, via une activité LTI, la propriété `context.contextActivities.grouping` DOIT mentionner l'instance de la plateforme Moodle, ainsi que le cours et l'activité LTI concernés. 
 - La propriété `context.platform` DOIT être précisée et avoir pour valeur `xProf`.
 - La propriété `context.team` DOIT identifier le groupe d'apprenants concerné sans lister ses membres.

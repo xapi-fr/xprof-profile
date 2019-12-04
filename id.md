@@ -85,9 +85,11 @@ où `http://platform_iri` est l'IRI de la plateforme xProf utilisée. Exemple : 
 
 
 <a name="profile"></a>
-## Profil xProf
+## Profils
 
-Le profil xProf est identifié par `http://xapi.isae.fr/vocab/profiles/xprof`.
+- Le profil xProf est identifié par `http://xapi.isae.fr/vocab/profiles/xprof`.
+
+- Le profil VLE est identifié par `http://vocab.xapi.fr/categories/vle-profile`.
 
 
 
